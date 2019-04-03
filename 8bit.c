@@ -44,7 +44,7 @@ float ufloat8_to_float(ufloat8 uf) {
   uint16_t mantissa = uf & 0xf | (1<<4);
   int8_t exponent = ((uf >> 4) & 0xf) - 2;
   if(exponent == 0) {
-    return 0.0;
+    return 1.0;
   }
   exponent -= 4;
   if(exponent >= 0) {
